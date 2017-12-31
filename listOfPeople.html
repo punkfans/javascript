@@ -1,0 +1,7 @@
+<ul>
+    <li ng-repeat="person in people.data">
+        Name: {{person.name}} |
+        Age: {{person.age}}
+        <a href="" ng-click="people.deletePerson($index)">Delete</a>
+    </li>
+</ul>

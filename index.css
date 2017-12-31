@@ -1,0 +1,49 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+input.ng-invalid {
+    border-color: red;
+}
+
+.progressBar {
+    width: 100%;
+    border: 1px solid black;
+}
+
+.bar {
+    height: 30px;
+    background-color: green;
+    animation: fill 3s linear;
+}
+
+@keyframes fill {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.container {
+    background-color: steelblue;
+}
+
+.box {
+    width: calc(25% - 22px);
+    border: 1px solid lightgrey;
+    float: left;
+    padding: 10px;
+}
+
+.box h2 {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid red;
+}
+
+.clear {
+    clear: both;
+}

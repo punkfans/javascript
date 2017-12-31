@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./index.js"></script>
+    <link rel="stylesheet" href="./index.css" />
+</head>
+<body ng-app="test">
+    <progress max="3000" value="0"></progress>
+    <div class="progressBar">
+        <div class="bar"></div>
+    </div>
+    <div ng-controller="myCtrl as mc">
+        <form name="form">
+            <label>
+                Pattern:
+                <input ng-model="pattern" />
+            </label>
+            <div>{{pattern}}</div>
+
+            <label>
+                Input:
+                <input name="input" ng-model="input" ng-pattern="pattern" />
+            </label>
+            <div>
+                <button ng-click="mc.toggleAddNewPerson()">Add new person</button>
+                <div ng-if="mc.shouldShowAddNewPerson">
+                    <label>
+                        Name: <input ng-model="mc.newPersonName" />
+                    </label>
+                    <label>
+                        Age: <input ng-model="mc.newPersonAge" />
+                    </label>
+                    <button ng-click="mc.addNewPerson()">Submit!</button>
+                </div>
+            </div>
+        </form>
+        <list-of-people data="mc.data"></list-of-people>
+        <div>MY Mouse is at: <span id="mousePosition"></span></div>
+        <div class="container">
+            <div class="box">
+                <h2>Title</h2>
+                <p>
+                    fhdsjka adfhsj adfhsjl hafsdkl hjkasl hgjaklf ghioap gio3hgiol hgoa hgioa
+                     hafjsil guaisl ghuiasl hua ghuasdl gjasl gauisl gioua
+                    agu fidliu  iru iul fgiualg jfakl gjads;
+                    agiu al guial ghuail ghafjl gdffff.
+                </p>
+            </div>
+            <div class="box">
+                <h2>Title</h2>
+                <p>
+                    fhdsjka adfhsj adfhsjl hafsdkl hjkasl hgjaklf ghioap gio3hgiol hgoa hgioa
+                    hafjsil guaisl ghuiasl hua ghuasdl gjasl gauisl gioua
+                    agu fidliu  iru iul fgiualg jfakl gjads;
+                    agiu al guial ghuail ghafjl gdffff.
+                </p>
+            </div>
+            <div class="box">
+                <h2>Title</h2>
+                <p>
+                    fhdsjka adfhsj adfhsjl hafsdkl hjkasl hgjaklf ghioap gio3hgiol hgoa hgioa
+                    hafjsil guaisl ghuiasl hua ghuasdl gjasl gauisl gioua
+                    agu fidliu  iru iul fgiualg jfakl gjads;
+                    agiu al guial ghuail ghafjl gdffff.
+                </p>
+            </div>
+            <div class="box">
+                <h2>Title</h2>
+                <p>
+                    fhdsjka adfhsj adfhsjl hafsdkl hjkasl hgjaklf ghioap gio3hgiol hgoa hgioa
+                    hafjsil guaisl ghuiasl hua ghuasdl gjasl gauisl gioua
+                    agu fidliu  iru iul fgiualg jfakl gjads;
+                    agiu al guial ghuail ghafjl gdffff.
+                </p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</body>
+<script src="javascript/throttle_debounce/throttle.js"></script>
+</html>
