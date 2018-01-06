@@ -1,9 +1,9 @@
 var input = document.getElementById('debounce');
 
-var throttleTimeout;
+var debounceTimeout;
 input.addEventListener('keydown', function (e) {
-    clearTimeout(throttleTimeout);
-    throttleTimeout = setTimeout(function () {
+    clearTimeout(debounceTimeout);
+    debounceTimeout = setTimeout(function () {
         console.log('Debounce: ' + e.keyCode);
     }, 1000);
 });
